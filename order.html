@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Order</title>
+</head>
+<body>
+    <form id="order-form" class="form">
+        <h1 class="form-title">Оформление заказа в типографии</h1>
+        <div class="form-group">
+        <label for="manager-select">Выберите менеджера, принявшего заказ:</label>
+        <select id="manager-select" name="manager-select" required>
+        <option value="">— Выберите менеджера —</option>
+        <option value="Александров Александр Александрович">Александров Александр Александрович</option>
+        <option value="Борисов Борис Борисович">Борисов Борис Борисович</option>
+        <option value="Владимиров Владимир Владимирович">Владимиров Владимир Владимирович</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="last-name-input">Фамилия:</label>
+        <input id="last-name-input" type="text" name="last-name-input" required>
+        </div>
+        <div class="form-group">
+        <label for="first-name-input">Имя:</label>
+        <input id="first-name-input" type="text" name="first-name-input" required>
+        </div>
+        <div class="form-group">
+        <label for="patronymic-input">Отчество:</label>
+        <input id="patronymic-input" type="text" name="patronymic-input" required>
+        </div>
+        <div class="form-group">
+        <label for="printing-select">Выберите тип печати:</label>
+        <select id="printing-select" name="printing-select" required>
+        <option value="">— Выберите тип печати —</option>
+        <option value="цифровая">Цифровая печать</option>
+        <option value="офсетная">Офсетная печать</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="paper-select">Выберите тип бумаги:</label>
+        <select id="paper-select" name="paper-select" required>
+        <option value="">— Выберите тип бумаги —</option>
+        <option value="мелованная">Мелованная бумага</option>
+        <option value="офсетная">Офсетная бумага</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="quantity-input">Введите количество:</label>
+        <input id="quantity-input" type="number" name="quantity-input" min="1" required>
+        </div>
+        <div class="form-group">
+        <label for="comments-input">Комментарии к заказу:</label>
+        <textarea id
+        
+        ="comments-input" name="comments-input" rows="5"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Сформировать заказ</button>
+        </form>
+        
+        <div id="modal" class="modal">
+        <div class="modal-content">
+
+        <span class="close-button">&times;</span>
+        <h2 class="modal-title">Данные заказа</h2>
+        <div id="order-details"></div>
+        <button id="confirm-button" class="confirm-button">Подтвердить</button>
+        </div>
+        </div>
+        
+        <script src="js/script.js"></script>
+</body>
+</html>
